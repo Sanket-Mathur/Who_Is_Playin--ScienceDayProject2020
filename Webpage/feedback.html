@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Science Day Project - Sanket Mathur</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="feed">
+        <a href="index.html">
+            <h1>FEEDBACK</h1>
+        </a>
+        <div class="normal">
+            <h2>NORMAL</h2>
+            <h4>(We might respond to your feedback)</h4>
+            <form action="feedback.php" method="post">
+                <p>Name<br>
+                <input name="name" type="text" placeholder="FullName" required>
+                </p>
+                <p>Email<br>
+                <input name="email" type="email" placeholder="abc@example.com" required>
+                </p>
+                <p>Feedback<br>
+                    <textarea name="feed" cols="30" rows="8" required></textarea>
+                </p>
+                <input name="sub" type="submit">
+            </form>
+        </div>
+        <div class="anonymous">
+            <h2>ANONYMOUS</h2>
+            <h4>(We won't ask for any personal details)</h4>
+            <form action="feedback.php" method="post">
+                <p>Feedback<br>
+                    <textarea name="feed" cols="30" rows="19" required></textarea>
+                </p>
+                <input name="sub" type="submit">
+            </form>
+        </div>
+        <div class="left_nav">
+            <a href="index.html" id="lnl1"><img src="Images/home.png"></a>
+            <br>
+            <a href="stats.html" id="lnl2"><img src="Images/stats.png"></a>
+            <br>
+            <a href="feedback.html" id="lnl3"><img src="Images/feedback.png"></a>
+            <br>
+            <a href="register.html" id="lnl4"><img src="Images/note.png"></a>
+            <br>
+            <a href="download.html" id="lnl5"><img src="Images/download.png"></a>
+        </div>
+    </body>
+</html>

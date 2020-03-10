@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Science Day Project - Sanket Mathur</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="game" id="spaceinvadors">
+        <header>
+            <a href="index.html">
+                <h1>SPACE INVADORS</h1>
+            </a>
+        </header>
+        <div>
+            <h2>ABOUT THE GAME:</h2>
+            <h3>How to play</h3>
+            <p>The controls for Space invadors are the Left and Right keys for moving the player across the screen, and Space key for shooting the bullet. Toggle Numpad 0 for switching 'ON' or 'OFF' the autoplay</p>
+            <h3>Objective</h3>
+            <p>The objective of this game is to kill the enemies bu shooting them with a bullet from your space ship. You can move your space ship horizontally across the screen. The game end if you fail to kill the enemy in time and they crash into you. The enemies keeps spawing and hence it is a continuous game of taking your aim for the moving targets and shooting.</p>
+            <h2>CODE SNIPTS:</h2>
+            <h3>Player</h3>
+            <p>The player is defaulted in the centre of the screen. The value of change in the x-axis of the player is defaulted to zero but are accessed though the left and right keys. The function player blits a preloaded player image onto the screen using the blit method defined in the draw class in pygame framework.</p>
+            <blockquote>
+                <p>playerImg = pygame.image.load('space-invaders.png')</p>
+                <p>playerX = 370</p>
+                <p>playerY = 480</p>
+                <p>playerX_change = 0</p>
+                <p>def player(x,y):</p>
+                <p>&emsp;screen.blit(playerImg, (x,y))</p>
+            </blockquote>
+            <h3>Enemy</h3>
+            <p>The position of enemies to spawn is selected at random using the random module but is defined to a specific area and direction for movement. Each time the enemy hits the boundary, it drops down a level coming closer to you. Now a for loop is used for definig random values to the list of enemies. And there after an function blits an image loaded into the program using the load method in image class.</p>
+            <blockquote>
+                <p>enemyImg = []</p>
+                <p>enemyX = []</p>
+                <p>enemyY = []</p>
+                <p>enemyX_change = []</p>
+                <p>enemyY_change = []</p>
+                <p>num_of_enemy = 5</p>
+                <p>for i in range(num_of_enemy):</p>
+                <p>&emsp;enemyImg.append(pygame.image.load('character.png'))</p>
+                <p>&emsp;enemyX.append(random.randint(0,736))</p>
+                <p>&emsp;enemyY.append(random.randint(50,150))</p>
+                <p>&emsp;enemyX_change.append(4)</p>
+                <p>&emsp;enemyY_change.append(40)</p>
+                <p>def enemy(x,y,i):</p>
+                <p>&emsp;screen.blit(enemyImg[i], (x,y))</p>
+            </blockquote>
+            <h3>Crashing</h3>
+            <p>Checking if the minimum distance between the spaceship and enemy is less than 27 pixels(experimental). It returns True in case the snake has crashed and returns False if not.</p>
+            <blockquote>
+                <p>def isCollision(enemyX, enemyY, bulletX, bulletY):</p>
+                <p>distance = math.sqrt(math.pow(enemyX-bulletX, 2) + (math.pow(enemyY-bulletY, 2)))</p>
+                <p>if distance &#60; 27:</p>
+                <p>&emsp;return True</p>
+                <p>else:</p>
+                <p>&emsp;return False</p>
+            </blockquote>
+            <h3>Autoplay</h3>
+            <p>The auto play function checks x-axis and direction of the lowest enemy and aims towards it based on its y-axis.</p>
+            <blockquote>
+                <p>def selfaim(enemyX, enemyY, playerX, enemyX_change):</p>
+                <p>&emsp;maxY = max(enemyY)</p>
+                <p>&emsp;ind = enemyY.index(maxY)</p>
+                <p>&emsp;maxX = enemyX[ind]</p>
+                <p>&emsp;dir = enemyX_change[ind]</p>
+                <p>&emsp;try:</p>
+                <p>&emsp;&emsp;d = round((480 - maxY) / (playerX - maxX), 2)</p>
+                <p>&emsp;except ZeroDivisionError:</p>
+                <p>&emsp;&emsp;return 0</p>
+                <p>&emsp;if dir == 4:</p>
+                <p>&emsp;&emsp;if d > 2.40:</p>
+                <p>&emsp;&emsp;&emsp;return 5</p>
+                <p>&emsp;&emsp;elif d &#60; 2.20:</p>
+                <p>&emsp;&emsp;&emsp;return -5</p>
+                <p>&emsp;&emsp;else:</p>
+                <p>&emsp;&emsp;&emsp;return 0</p>
+                <p>&emsp;else:</p>
+                <p>&emsp;&emsp;if d > -2.20:</p>
+                <p>&emsp;&emsp;&emsp;return 5</p>
+                <p>&emsp;&emsp;elif d &#60; -2.40:</p>
+                <p>&emsp;&emsp;&emsp;return -5</p>
+                <p>&emsp;&emsp;else:</p>
+                <p>&emsp;&emsp;&emsp;return 0</p>
+            </blockquote>
+            <a href="index.html">
+                <h2 id="ty">THANK YOU</h2>
+            </a>
+        </div>
+    </body>
+</html>

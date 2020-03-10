@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Science Day Project - Sanket Mathur</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="game" id="jumpntuck">
+        <header>
+            <a href="index.html">
+                <h1>JUMP AND TUCK</h1>
+            </a>
+        </header>
+        <div>
+            <h2>ABOUT THE GAME:</h2>
+            <h3>How to play</h3>
+            <p>The game jump and tuck is controlled using the upper and lower arrow keys. Use Numpad 0 to turn 'ON' or 'OFF' the autoplay.</p>
+            <h3>Objective</h3>
+            <p>The objective of this game is to dodge the obstacles coming in the way of the skater. You have two choices of either jumping over the obstacle or tucking under it. Deciede it based on the height on the obstacle.</p>
+            <h2>CODE SNIPTS:</h2>
+            <h3>Player</h3>
+            <p>The player has a predefined x and y axis which can change based upon the position of the player. The image of the player in the bent mode and in the standing mode in loaded into the memory using the load method in the image class and is blitted over the screen using the blit method defined in the pygame framework.</p>
+            <blockquote>
+                <p>playerimg_stand = pygame.image.load('skate.png')</p>
+                <p>playerimg_bent = pygame.image.load('skate_bent.png')</p>
+                <p>playerX = 60</p>
+                <p>playerY = 330</p>
+                <p>bent = False</p>
+                <p>def player(x, y, bent):</p>
+                <p>&emsp;if bent:</p>
+                <p>&emsp;&emsp;screen.blit(playerimg_bent, (x, y+2))</p>
+                <p>&emsp;&emsp;else:</p>
+                <p>&emsp;&emsp;screen.blit(playerimg_stand, (x, y))</p>
+            </blockquote>
+            <h3>Obstacles</h3>
+            <p>The obstacles are blitted over the screen with a chaning x-axis. These obstacles come towards the player giving an illusion of the player skateboarding through the streets. These obstacles are choosen at random using the random library.</p>
+            <blockquote>
+                <p>def chooseObs():</p>
+                <p>&emsp;return random.randint(1,2)</p>
+                <p>birdimg = pygame.image.load('bird.png')</p>
+                <p>trashimg = pygame.image.load('trash.png')</p>
+                <p>obsX = 1000</p>
+                <p>obsX_change = -10</p>
+                <p>def placeObs(x, obs):</p>
+                <p>&emsp;if obs == 1:</p>
+                <p>&emsp;&emsp;screen.blit(birdimg, (x, 230))</p>
+                <p>&emsp;else:</p>
+                <p>&emsp;&emsp;screen.blit(trashimg, (x, 390))</p>
+            </blockquote>
+            <h3>Crashing</h3>
+            <p>Checking if the minimum distance between the skater and obstacle is less than 105 pixels in case of trashcan and checks if the player is bent while the obstacle in above the player in case of birds. It returns True in case the snake has crashed and returns False if not.</p>
+            <blockquote>
+                <p>def crash(playerY, obsX, o, bent):</p>
+                <p>&emsp;if o == 1:</p>
+                <p>&emsp;&emsp;if obsX >= 0 and obsX &#60;= 107 and not bent:</p>
+                <p>&emsp;&emsp;&emsp;return True</p>
+                <p>&emsp;elif o == 2:</p>
+                <p>&emsp;&emsp;dist = math.sqrt((obsX-60)**2 + (390-playerY)**2)</p>
+                <p>&emsp;&emsp;if dist &#60; 105:</p>
+                <p>&emsp;&emsp;&emsp;return True</p>
+                <p>&emsp;else:</p>
+                <p>&emsp;&emsp;return False</p>
+            </blockquote>
+            <h3>Autoplay</h3>
+            <p>The auto play function checks if the obstacle is withing the limits of the player and which type of obstacle is it. Depending on that it passes its commands to either jump or tuck in order to dodge the obstacle.</p>
+            <blockquote>
+                <p>def auto(obsX, o):</p>
+                <p>&emsp;if o == 1 and obsX >= 0 and obsX &#60;= 300:</p>
+                <p>&emsp;&emsp;return 'tuck'</p>
+                <p>&emsp;elif o == 2 and obsX >= 0 and obsX &#60;= 200:</p>
+                <p>&emsp;&emsp;return 'jump'</p>
+                <p>&emsp;else:</p>
+                <p>&emsp;&emsp;return 'none'</p>
+            </blockquote>
+            <a href="index.html">
+                <h2 id="ty">THANK YOU</h2>
+            </a>
+        </div>
+    </body>
+</html>

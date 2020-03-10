@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Science Day Project - Sanket Mathur</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="game" id="flappybirds">
+        <header>
+            <a href="index.html">
+                <h1>FLAPPY BIRDS</h1>
+            </a>
+        </header>
+        <div>
+            <h2>ABOUT THE GAME:</h2>
+            <h3>How to play</h3>
+            <p>This game is played only one key that is the space key, which is used to give the bird an upward momentum. Use Numpad 0 to turn 'ON' or 'OFF' the autoplay.</p>
+            <h3>Objective</h3>
+            <p>The objective of this game is to dodge the obstacles coming in the way of the bird. You have to fly in between the two pipes and touching any of them will cause the death of the bird.</p>
+            <h2>CODE SNIPTS:</h2>
+            <h3>Player</h3>
+            <p>The bird is initialized in the middle of the screen. It goes down in case any upward momentum is not applies i.e. space is not pressed. The image of bird dependes upon the directions in which it is going.</p>
+            <blockquote>
+                <p>bird_up = pygame.image.load('bird_up.png')</p>
+                <p>bird_down = pygame.image.load('bird_down.png')</p>
+                <p>y_change = 2</p>
+                <p>y_axis = 390</p>
+                <p>def player(y_axis):</p>
+                <p>&emsp;if fly:</p>
+                <p>&emsp;&emsp;screen.blit(bird_up, (40, y_axis))</p>
+                <p>&emsp;else:</p>
+                <p>&emsp;&emsp;screen.blit(bird_down, (40, y_axis))</p>
+            </blockquote>
+            <h3>Obstacles</h3>
+            <p>The obstacles are blitted over the screen with a chaning x-axis. These obstacles come towards the player giving an illusion of the flying through the pipes. The distance between the upper pipe and the lower pipe is predefined and it is the minimum distance possible allowed for the bird to fly. Heights of these obstacles are choosen at random using the random library.</p>
+            <blockquote>
+                <p>pipe_up = pygame.image.load('pipe_up.png')</p>
+                <p>pipe_down = pygame.image.load('pipe.png')</p>
+                <p>obsX = 800</p>
+                <p>obsX_change = -4</p>
+                <p>obsY = random.randint(-250, 0)</p>
+                <p>def obs(obsX, obsY):</p>
+                <p>&emsp;screen.blit(pipe_up, (obsX, obsY))</p>
+                <p>&emsp;screen.blit(pipe_down, (obsX, obsY+505))</p>
+            </blockquote>
+            <h3>Crashing</h3>
+            <p>Checking if the height of the bird is heigher or lower than what is allowed between the pipes while the pipes are in the range of the player. It also checks if the bird touches any of the boundry. It returns True in case the snake has crashed and returns False if not.</p>
+            <blockquote>
+                <p>def crash(obsX, obsY, y_axis):</p>
+                <p>&emsp;if obsX &#60;= 100 and obsX >= -20:</p>
+                <p>&emsp;&emsp;if (y_axis >= obsY + 350) and (y_axis &#60;= obsY + 445):</p>
+                <p>&emsp;&emsp;&emsp;return False</p>
+                <p>&emsp;&emsp;else:</p>
+                <p>&emsp;&emsp;&emsp;return True</p>
+                <p>&emsp;elif y_axis &#60;= 0 or y_axis >= 535:</p>
+                <p>&emsp;&emsp;return True</p>
+                <p>&emsp;else:</p>
+                <p>&emsp;&emsp;return False</p>
+            </blockquote>
+            <h3>Autoplay</h3>
+            <p>The auto play function checks if the obstacle is lower or above the bird and hence passes out the command if the birds will fly upwards or glide down. It returns true if it wants the bird to fly and false otherwise.</p>
+            <blockquote>
+                <p>def autoplay(obsY, y_axis):</p>
+                <p>&emsp;if y_axis >= obsY + 444:</p>
+                <p>&emsp;&emsp;return True</p>
+                <p>&emsp;else:</p>
+                <p>&emsp;&emsp;return False</p>
+            </blockquote>
+            <a href="index.html">
+                <h2 id="ty">THANK YOU</h2>
+            </a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,695 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+/*---------------------FONTS---------------------*/
+
+@font-face
+{
+    src: url(Fonts/Montague.ttf);
+    font-family: montague;
+}
+@font-face
+{
+    src: url(Fonts/albas.ttf);
+    font-family: albas;
+}
+@font-face
+{
+    src: url(Fonts/GenghisKhan.ttf);
+    font-family: GK;
+}
+@font-face
+{
+    src: url(Fonts/planetbe.ttf);
+    font-family: planetbe;
+}
+@font-face
+{
+    src: url(Fonts/BroadcastTitling.ttf);
+    font-family: BcT;
+}
+@font-face
+{
+    src: url(Fonts/WedgieRegular.ttf);
+    font-family: Wedgie;
+}
+@font-face
+{
+    src: url(Fonts/CheapSign.ttf);
+    font-family: CS;
+}
+
+/*---------------------INDEX---------------------*/
+
+.index .nav
+{
+    position: fixed;
+    z-index: 1;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: black;
+    padding: 40px;
+    right: 0px;
+    height: 70%;
+    top: 10%;
+    font-size: 600%;
+    opacity: 40%;
+}
+.index .nav a
+{
+    color: white;
+    text-decoration: none;
+}
+
+.left_nav
+{
+    position: fixed;
+    z-index: 1;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: black;
+    padding: 40px;
+    left: 0px;
+    height: 70%;
+    top: 10%;
+    font-size: 600%;
+    opacity: 40%;
+}
+.left_nav a
+{
+    color: white;
+    text-decoration: none;
+}
+.left_nav a :hover
+{
+    opacity: 50%;
+}
+#lnl1
+{
+    position: absolute;
+    top: 0%;
+    left: 30%;
+}
+#lnl2
+{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+#lnl3
+{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}
+
+#lnl4
+{
+    position: absolute;
+    top: 60%;
+    left: 30%;
+}
+#lnl5
+{
+    position: absolute;
+    top: 80%;
+    left: 30%;
+}
+
+#l1
+{
+    position: absolute;
+    top: 0%;
+    right: 40%;
+}
+#l2
+{
+    position: absolute;
+    top: 20%;
+    right: 40%;
+}
+
+#l3
+{
+    position: absolute;
+    top: 40%;
+    right: 40%;
+}
+
+#l4
+{
+    position: absolute;
+    top: 60%;
+    right: 40%;
+}
+#l5
+{
+    position: absolute;
+    top: 80%;
+    right: 40%;
+}
+
+.index #top
+{
+    position: absolute;
+    background: url(Images/background.jpg);
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+}
+.index #top h1
+{
+    font-family: montague;
+    font-size: 800%;
+    color: #4CE0AA;
+    font-weight: 100;
+    margin: 0px;
+}
+.index #top h3
+{
+    font-family: albas;
+    font-size: 300%;
+    color: #3DB388;
+    font-weight: 100;
+    margin: 0px;
+}
+.index #top #bq1
+{
+    float: left;
+    color: white;
+    font-family: GK;
+    font-size: 210%;
+}
+.index #top #bq1 h4
+{
+    margin: 5px;
+}
+.index #top #bq1 p
+{
+    margin: 0px;
+}
+.index #top #bq2
+{
+    float: right;
+    color: white;
+    font-family: GK;
+    font-size: 220%;
+}
+.index #top #bq2 p
+{
+    margin: 5px;
+}
+.index #box1
+{
+    position: absolute;
+    background: #ffbe76;
+    color: white;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0px;
+    font-size: 400%;
+}
+.index #box1 h1
+{
+    font-family: planetbe;
+    text-align: center;
+    font-weight: 100;
+    margin: 0px;
+    color: black;
+}
+.index #box1 #a1
+{
+    font-size: 30px;
+    width: 20%;
+    padding: 40px;
+    background: black;
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 20%;
+}
+.index #box1 a
+{
+    text-decoration: none;
+    color: white;
+}
+.index #box2
+{
+    position: absolute;
+    background: #badc58;
+    color: white;
+    width: 100%;
+    height: 100%;
+    top: 200%;
+    left: 0px;
+    font-size: 400%;
+}
+.index #box2 h1
+{
+    font-family: BcT;
+    text-align: center;
+    font-weight: 100;
+    margin: 0px;
+    color: black;
+}
+.index #box2 #a2
+{
+    font-size: 30px;
+    width: 20%;
+    padding: 40px;
+    background: black;
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 23%;
+}
+.index #box2 a
+{
+    text-decoration: none;
+    color: white;
+}
+.index #box3
+{
+    position: absolute;
+    background: #55efc4;
+    color: white;
+    width: 100%;
+    height: 100%;
+    top: 300%;
+    left: 0px;
+    font-size: 400%;
+}
+.index #box3 h1
+{
+    font-family:  Wedgie;
+    text-align: center;
+    font-weight: 100;
+    margin: 0px;
+    color: black;
+}
+.index #box3 #a3
+{
+    font-size: 30px;
+    width: 20%;
+    padding: 40px;
+    background: black;
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 24%;
+}
+.index #box3 a
+{
+    text-decoration: none;
+    color: white;
+}
+.index #box4
+{
+    position: absolute;
+    background: #fd79a8;
+    color: white;
+    width: 100%;
+    height: 100%;
+    top: 400%;
+    left: 0px;
+    font-size: 400%;
+}
+.index #box4 h1
+{
+    font-family: CS;
+    text-align: center;
+    font-weight: 100;
+    margin: 30px;
+    color: black;
+}
+.index #box4 #a3
+{
+    font-size: 30px;
+    width: 20%;
+    padding: 40px;
+    background: black;
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 24%;
+}
+.index #box4 a
+{
+    text-decoration: none;
+    color: white;
+}
+
+/*---------------------GAMES---------------------*/
+
+.game p
+{
+    margin: 0;
+}
+.game blockquote
+{
+    font-size: 50%;
+    background: white;
+    padding: 20px;
+}
+.game h1
+{
+    font-weight: 100;
+    font-size: 400%;
+    text-align: center;
+    margin: 0;
+}
+.game #ty
+{
+    text-align: center;
+    color: black;
+}
+.game a h1
+{
+    color: black;
+}
+.game a
+{
+    text-decoration: none;
+}
+
+#snake
+{
+    background: #ffbe76;
+    font-size: 200%;
+}
+#snake h1
+{
+    font-family: planetbe;
+}
+
+#spaceinvadors
+{
+    background: #badc58;
+    font-size: 200%;
+}
+#spaceinvadors h1
+{
+    font-family: BcT;
+}
+
+#jumpntuck
+{
+    background: #55efc4;
+    font-size: 200%;
+}
+#jumpntuck h1
+{
+    font-family: Wedgie;
+}
+
+#flappybirds
+{
+    background: #fd79a8;
+    font-size: 200%;
+}
+#flappybirds h1
+{
+    font-family: CS;
+}
+
+/*---------------------DOWNS---------------------*/
+
+.down .downheading
+{
+    text-align: center;
+    color: black;
+    margin: 0px;
+    font-size: 600%;
+    font-family: montague;
+}
+.down a
+{
+    text-decoration: none;
+}
+.down .downsnake
+{
+    background: #ffbe76;
+    position: absolute;
+    left: 7%;
+    top: 20%;
+    height: 30%;
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    font-size: 150%;
+    font-family: planetbe;
+}
+.down .downspaceinvadors
+{
+    background: #badc58;
+    position: absolute;
+    right: 3%;
+    top: 20%;
+    height: 30%;
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    font-size: 150%;
+    font-family: BcT;
+}
+.down .downjumpntuck
+{
+    background: #55efc4;
+    position: absolute;
+    top: 60%;
+    height: 30%;
+    left: 7%;
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    font-size: 150%;
+    font-family: Wedgie;
+}
+.down .downflappybirds
+{
+    background: #fd79a8;
+    position: absolute;
+    top: 60%;
+    height: 30%;
+    right: 3%;
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    font-size: 150%;
+    font-family: CS;
+}
+.down h1
+{
+    font-weight: 100;
+}
+.down button
+{
+    padding: 10px;
+    background: grey;
+    border-radius: 5px;
+    width: 50%;
+}
+
+/*---------------------STATS---------------------*/
+
+.stats a
+{
+    text-decoration: none;
+}
+.stats h1
+{
+    font-family: montague;
+    margin: 0px;
+    font-size: 600%;
+    font-weight: 100;
+    text-align: center;
+    color: black;
+}
+.stats #statsnake
+{
+    font-family: planetbe;
+    font-weight: 100;
+    text-align: center;
+    font-size: 300%;
+    margin-bottom: 0px;
+}
+.stats #statspaceinvadors
+{
+    font-family: BcT;
+    font-weight: 100;
+    text-align: center;
+    font-size: 300%;
+    margin-bottom: 0px;
+}
+.stats #statjumpntuck
+{
+    font-family: Wedgie;
+    font-weight: 100;
+    text-align: center;
+    font-size: 300%;
+    margin-bottom: 0px;
+}
+.stats #statflappybirds
+{
+    font-family: CS;
+    font-weight: 100;
+    text-align: center;
+    font-size: 300%;
+    margin-bottom: 0px;
+}
+.stats table
+{
+    font-size: 150%;
+    border: solid 2px #000;
+    text-align: center;
+    position: relative;
+    left: 10%;
+    border-collapse: collapse;
+    width: 80%;
+}
+.stats th
+{
+    padding: 10px;
+}
+.stats td, th
+{
+    border-bottom: solid 1px;
+}
+.stats #alt1
+{
+    background: #cce6ff
+}
+.stats #alt2
+{
+    background:  #e6e6e6
+}
+.stats p
+{
+    position: relative;
+    left: 10%;
+}
+.stats #perfect
+{
+    float: right;
+    position: relative;
+    right: 10%;
+    margin-bottom: 20px;
+    margin-top: -70px;
+}
+
+/*---------------------FEEDS---------------------*/
+
+.feed
+{
+    text-align: center;
+}
+.feed h1
+{
+    font-size: 600%;
+    margin: 0px;
+    color: black;
+    font-family: montague;
+    font-weight: 100;
+}
+.feed a
+{
+    text-decoration: none;
+}
+.feed .normal
+{
+    position: absolute;
+    width: 40%;
+    left: 8%;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: grey;
+    border-width: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 130%;
+}
+.feed .anonymous
+{
+    position: absolute;
+    width: 40%;
+    right: 8%;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: grey;
+    border-width: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 130%;
+}
+.feed input
+{
+    background: #bdbdbd;
+    border-radius: 10px;
+    font-size: 100%;
+    padding: 5px;
+}
+.feed textarea
+{
+    background: #bdbdbd;
+    border-radius: 10px;
+    white-space: pre;
+}
+.feed h2,h4
+{
+    margin: 0px;
+}
+
+/*---------------------REGIS---------------------*/
+
+.regis a
+{
+    text-decoration: none;
+}
+.regis h1
+{
+    text-align: center;
+    font-size: 600%;
+    margin: 0px;
+    color: black;
+    font-family: montague;
+    font-weight: 100;
+}
+.regis p
+{
+    font-size: 150%;
+}
+.regis form
+{
+    position: absolute;
+    left: 20%;
+}
+.regis input
+{
+    background: #bdbdbd;
+    border-radius: 10px;
+    font-size: 80%;
+    padding: 5px;
+}
+.regis #sr
+{
+    width: 40%;
+    font-size: 150%;
+}

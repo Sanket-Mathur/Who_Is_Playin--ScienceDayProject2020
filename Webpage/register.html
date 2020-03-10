@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Science Day Project - Sanket Mathur</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="regis">
+        <a href="index.html"><h1>REGISTER</h1></a>
+        <div class="form">
+            <form action="register.php" method="post">
+                <p>FirstName
+                    <input name="firstname" type="text" placeholder="eg. John" style="width: 30%;" required>&nbsp;
+                    LastName
+                    <input name="lastname" type="text" placeholder="eg. Mathers" style="width: 30%;" required>
+                </p>
+                <p>Username
+                    <input name="username" type="text" placeholder="eg. John_Mathers_123" style="width: 45%;" required>&emsp;
+                    Age
+                    <input name="age" type="number" placeholder="eg. 21" style="width: 20%;" required>
+                </p>
+                <p>Gender&emsp;&emsp;&emsp;&emsp;
+                    <input type="radio" name="gender" value="male">
+                    <label for="male">Male</label>&emsp;&emsp;&emsp;&emsp;
+                    <input type="radio" name="gender" value="female">
+                    <label for="female">Female</label>&emsp;&emsp;&emsp;&emsp;
+                    <input type="radio" name="gender" value="other">
+                    <label for="other">Other</label>
+                </p>
+                <p>Email
+                    <input name="email" type="email" placeholder="eg. youremail@example.com" style="width: 35%;" required>&nbsp;
+                    Mobile Number
+                    <input name="mobnumber" type="tel" placeholder="eg. +1 1234567890" required>
+                </p>
+                <p>Qualification
+                    <input name="quali" type="text" placeholder="eg. B.Tech CSE" style="width: 18%;" required>&nbsp;
+                    Programming Language
+                    <input name="langs" type="text" placeholder="eg. Python, C, C++" required>
+                </p>
+                <p>City
+                    <input name="city" type="text" placeholder="eg. Lucknow" style="width: 20%;" required>&nbsp;
+                    State
+                    <input name="state" type="text" placeholder="eg. Uttar Pradesh" style="width: 20%;" required>&nbsp;
+                    Country
+                    <input name="country" type="text" placeholder="eg. India" style="width: 20%;" required>
+                </p>
+                <p>Password
+                    <input name="password" type="password" placeholder="Type a Password" style="width: 29%;" required>&nbsp;
+                    Altername Email
+                    <input name="alteremail" type="email" placeholder="OPTIONAL" style="width: 25%;">
+                </p>
+                &emsp;<input type="submit" value="REGISTER" style="background: #66ff66" id="sr">&emsp;&emsp;&ensp;
+                <input type="reset" value="RESET" style="background: #ff6666;" id="sr">
+            </form>
+        </div>
+        <div class="left_nav">
+            <a href="index.html" id="lnl1"><img src="Images/home.png"></a>
+            <br>
+            <a href="stats.html" id="lnl2"><img src="Images/stats.png"></a>
+            <br>
+            <a href="feedback.html" id="lnl3"><img src="Images/feedback.png"></a>
+            <br>
+            <a href="register.html" id="lnl4"><img src="Images/note.png"></a>
+            <br>
+            <a href="download.html" id="lnl5"><img src="Images/download.png"></a>
+        </div>
+    </body>
+</html>
