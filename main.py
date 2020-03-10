@@ -21,9 +21,9 @@ def flappy_birds():
     subprocess.call('python3 flappy_birds.py 1', shell=True)
 
 def webpage():
-    webbrowser.open('http://whoisplayin.ga')
-    #webbrowser.open('file:///home/sanket/PycharmProjects/Science%20Day%20Project%20-%20Sanket%20Mathur/WebPage/index.html')
-
+    webbrowser.open('file:///home/sanket/PycharmProjects/Science%20Day%20Project%20-%20Sanket%20Mathur/WebPage/index.html')
+    #add the location of the project accordingly
+    
 pygame.init()
 
 screen = pygame.display.set_mode((600,700))
